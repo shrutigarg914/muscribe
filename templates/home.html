@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>MuScribe - Using ML to deconstruct music</title>
+	<meta name="description" content="...">
+	<meta name="keywords" content="Neural Networks, Machine Learning, Music, isolating instruments">
+	<meta name="author" content="Shruti Garg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body{
+			background-color: #FFF5BD
+		}
+		#title{
+			background: #BD2A2A;
+			width: 30%;
+			margin: 0 auto;
+			padding: 2px;
+			border: 2px solid black;
+			box-shadow: 5px 5px;}
+		.sticky{
+			position: sticky;
+			top: 5px;
+			height: 80px;}
+		#spacer{
+			height: 60px;
+		}
+		#divider{
+			border: 1px dashed black
+		}
+		hr.pretty {
+		    border: 0;
+		    height: 1px;
+		    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));}
+	    button.github{
+			background-color: #7C0A02;
+			text-align: center;
+			color: #FFFDD3;
+			padding: 10px;
+			cursor: pointer;
+			border-radius: 20px;
+			box-shadow: 2px 2px black;}
+		button.action{
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<div id="spacer">
+	</div>
+	<div id="title" class="sticky">
+		<h1 align="center" style="color: #FFFDD3;">MuScribe</h1>
+	</div>
+<div class="sticky" id="spacer"></div></div>
+<div>
+<div style="height: 10px"></div>
+<hr class="pretty">
+	</div>
+<div style="padding: 0">
+<h2 style="text-align: center; color: #7C0A02; font-size: 40">Try Me!</h2>
+</div>
+<div>
+	<table>
+		<tr>
+			<td>
+				<a href="/gmidi">
+					<button>Generate melodies as MIDI files</button>
+				</a>
+			</td>
+			<td>
+				Explanation and source code link
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				Piano Melody:  
+				{% if MIDI %}
+				{% for note in MIDI %}
+				{{ note }}
+				{% endfor %}
+				{% endif %}
+			</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<table>
+		<tr>
+			<td>
+				Explanation here
+			</td>
+			<td>
+				<a>
+					<button>Convert to .wav using .sf2 files</button>
+				</a>
+			</td>
+		</tr>
+	</table>
+</div>
+<div>
+	<table>
+		<tr>
+			<td>
+				<a href="/gmidi/combine"><button>Combine Piano and Flute</button></a>
+			</td>
+			<td>
+				Explanation
+			</td>
+		</tr>
+	</table>
+	{% if au %}
+	<p>
+		Play Input Audio
+		<audio src="C:\Shruti\Capstone\webapp\templates\test.mp3" controls>
+			not working
+		</audio>
+	</p>
+	{% endif %}
+</div>
+<div>
+	<table>
+		<tr>
+			<td>
+				Explanation
+			</td>
+			<td>
+				<button>
+					<a href="/predict">
+						Get Predictions :D
+					</a>
+				</button>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			Output Melody:
+			{% if output %}
+			{% for note in output %}
+			{{ note }}
+			{% endfor %}
+			{% endif %}
+		</tr>
+	</table>
+</div>
+<div id="spacer"></div>
+<div style="text-align: center">
+	<a href=""><button class="github">Check Source code on Github</button></a>
+</div>
+<div id="spacer"></div>
+</body>
+</html>
