@@ -13,3 +13,11 @@ Also currently using a basic static web template. Will be used in a web applicat
 
 The function main_function in access.py, takes in an audio file (a wav file where there are by default twelve seconds of audio) and outputs the notes of the piano.
 You can also access the trained model directly (categorical_model).
+
+## Libraries used
+
+[tensorflow](https://www.tensorflow.org/)
+[Keras](https://keras.io/)
+[bMIDI]()
+[librosa](https://github.com/librosa/librosa)
+[Flask](https://flask.palletsprojects.com/en/1.1.x/)
