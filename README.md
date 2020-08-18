@@ -16,8 +16,8 @@ You can also access the trained model directly (categorical_model).
 
 ## Libraries used
 
-[tensorflow](https://www.tensorflow.org/)
-[Keras](https://keras.io/)
-[bMIDI]()
-[librosa](https://github.com/librosa/librosa)
-[Flask](https://flask.palletsprojects.com/en/1.1.x/)
+[tensorflow](https://www.tensorflow.org/)  
+[Keras](https://keras.io/)  
+[bMIDI]()  
+[librosa](https://github.com/librosa/librosa)  
+[Flask](https://flask.palletsprojects.com/en/1.1.x/)  
